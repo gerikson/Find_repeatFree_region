@@ -10,7 +10,8 @@ def hasGenes(chrom, start, end, genes, flank):
     o = genes.findOverlaps(chrom, max(0, start - flank), end + flank)
     return len(o) > 0
 
-
+#######
+#Split the regions by gene
 def splitByGenes(chrom, start, end, genes, flank):
     """
     Split a region into chunks not within flank of a gene
